@@ -1,0 +1,37 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "d342d11e-d424-4a3d-ac64-995b5e237d79",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "dest": "www.gosuslugi.ru:443",
+          "serverNames": ["www.gosuslugi.ru", "gosuslugi.ru"],
+          "privateKey": "qFHwGaqeRPMqjqZ4xJhK0wL9v5gT8cN1pUyXzA7bC2d",
+          "shortIds": ["6ba85179e30d4fc2"]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "direct"
+    }
+  ]
+}
